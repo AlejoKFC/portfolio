@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Title that appears in the browser tab -->
+    <title>My Portfolio</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h2 class="logo">Alejandro's Portfolio</h2>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== HOME ===== -->
+<section id="home" class = "section">
+    <!-- Main container (used to center and group content) -->
+    <div class="container">
+
+        
+    
+    
+        <!-- Main title (your name / identity) -->
+        <h1>Hi, I'm Alejandro </h1>
+
+        <!-- Short description -->
+        <p>Future Software Developer</p>
+        <p>Welcome to my portfolio, here you will find information about my projects and skills. Also my contact information.</p>
+
+        <!-- Button that triggers a JavaScript function -->
+        <button onclick="sayHello()">Click me</button>
+
+    </div>
+</section>
+    <!-- JavaScript section -->
+    <script>
+        // Function that runs when the button is clicked
+        function sayHello() {
+            // Shows a popup message
+            alert("Hello Bro 😎");
+        }
+    </script>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class = "section">
+        <h2>About Me</h2>
+        <p>I am learning web development and building my first portfolio.</p>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+
+    <section id="projects" class = "section">
+        <h2>Projects</h2>
+        <p>Here are some of the projects I've worked on:</p>
+        <ul>
+            <li>
+                <h2>Project 1: </h2>
+                <p>Description of project 1</p>
+                <h2>Project 2: </h2>
+                <p>Description of project 2</p>
+                <h2>Project 3: </h2>
+                <p>Description of project 3</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+
+    <section id="contact" class = "section">
+        <h2>Contact Me</h2>
+        <p>You can reach me at:</p>
+        <ul>
+            <li>Email:alegandrojose@gmail.com</li>
+            <li>Phone: +57 319 3743414</li>
+        </ul>
+    </section>
+
+    <script>
+        // Select all sections
+        const sections = document.querySelectorAll('.section');
+
+        // Function to check visibility
+        function showOnScroll() {
+            const triggerBottom = window.innerHeight * 0.85;
+
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+
+                if (sectionTop < triggerBottom && sectionTop > 0) {
+                    section.classList.add("show");
+                }
+            });
+        }
+
+        // Run on scroll
+        window.addEventListener("scroll", showOnScroll);
+
+    </script>
+
+    <script>
+        const links = document.querySelectorAll('.nav-links a');
+
+        link.addEventListener('click', () => {
+
+            // Little delay to let the section come
+            setTimeout(() => {
+                showOnScroll();
+            }, 300);
+        });
+    </script>
+</body>
+</html>

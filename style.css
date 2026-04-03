@@ -1,0 +1,217 @@
+/* ========================================
+   GLOBAL STYLES (GENERAL PAGE CONFIG)
+======================================== */
+
+body {
+    margin: 0; /* Remove default spacing */
+    font-family: Arial, sans-serif;
+
+    /* Background gradient (your palette) */
+    background: linear-gradient(180deg, #1c0f1f, #66317a, #85559a);
+
+    color: #F8EDFB; /* Default text color */
+    text-align: center;
+
+    padding-top: 80px; /* Prevent navbar overlap */
+}
+
+
+/* Smooth scrolling when clicking navbar links */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: fixed; /* Always on top */
+    top: 0; /* Stick to top */
+    width: 100%; /* Full width */
+
+    z-index: 1000; /* Ensure it stays above other content */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+
+    flex-direction: column; /* Stack logo and links vertically */
+}
+
+
+/* ===== LOGO ===== */
+.logo {
+    margin-bottom: 10px;
+}
+
+
+/* ===== NAV LINKS ===== */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Space between links */
+
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Links style */
+.nav-links a {
+    text-decoration: none;
+    color: #F8EDFB;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+
+/* Hover effect */
+.nav-links a:hover {
+    color: #AD74C3;
+}
+
+
+/* ========================================
+   LOGO + ANIMATIONS
+======================================== */
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    /* Initial animation (on load) */
+    opacity: 0;
+    transform: translateY(-20px);
+
+    animation: fadeSlide 2s ease forwards;
+}
+
+
+/* Animation when page loads */
+@keyframes fadeSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Hover effect (interactive + glow) */
+.logo:hover {
+    color: #AD74C3;
+
+    transform: scale(1.1);
+
+    text-shadow: 
+        0 0 0.5px #AD74C3,
+        0 0 0.7px #7A3A8E,
+        0 0 10px #522566;
+
+    transition: 0.3s;
+}
+
+
+/* ========================================
+   MAIN CONTAINER (HERO STYLE CARD)
+======================================== */
+
+.container {
+    margin-top: 100px;
+    padding: 40px;
+
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.05);
+
+    border-radius: 20px;
+
+    width: 300px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* ========================================
+   TEXT STYLES
+======================================== */
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    color: #EADFF0;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+
+    border: none;
+
+    background-color: #7A3A8E;
+    color: #F8EDFB;
+
+    font-weight: bold;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* Button hover effect */
+button:hover {
+    background-color: #522566;
+}
+
+
+/* ========================================
+   SECTIONS (ABOUT, PROJECTS, CONTACT)
+======================================== */
+
+.section {
+    padding: 100px 20px;
+    min-height: 100vh; /* Full screen height */
+}
+
+
+/* Section titles */
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+
+/* Fade in sections when they come into view */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 2s ease; 
+}
+
+.section.show{
+    opacity: 1;
+    transform: translateY(0);
+}
