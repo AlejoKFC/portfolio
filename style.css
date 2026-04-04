@@ -255,3 +255,43 @@ button:hover {
         0 0 10px rgba(173, 116, 195, 0.5),
         0 0 20px rgba(122, 58, 142, 0.5);
 }
+
+/* ========================================
+   INFO CARDS
+======================================== */
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: warp; /* Allow cards to wrap on smaller screens */
+    margin-top: 40px;
+}
+
+/* Individual card */
+
+.card-info {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    width: 250px;
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+/* Title */
+
+.card-info:hover {
+    transform: translateY(-10px) scale(1.05);
+
+    background: rgba(255, 255, 255, 0.1);
+
+    box-shadow: 
+        0 0 10px rgba(173, 116, 195, 0.5),
+        0 0 20px rgba(122, 58, 142, 0.5);
+}
