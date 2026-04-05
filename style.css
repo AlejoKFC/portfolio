@@ -121,28 +121,6 @@ html {
 
 
 /* ========================================
-   MAIN CONTAINER (HERO STYLE CARD)
-======================================== */
-
-.container {
-    margin-top: 100px;
-    padding: 40px;
-
-    /* Glass effect */
-    background: rgba(255, 255, 255, 0.05);
-
-    border-radius: 20px;
-
-    width: 300px;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    backdrop-filter: blur(10px);
-}
-
-
-/* ========================================
    TEXT STYLES
 ======================================== */
 
@@ -187,10 +165,75 @@ button:hover {
 
 
 /* ========================================
-   SECTIONS (ABOUT, PROJECTS, CONTACT)
+   SECTIONS (HOME, ABOUT, PROJECTS, CONTACT)
 ======================================== */
 
-.section {
+/* Home section */
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    order: 1; /* Ensure it comes first */
+
+    gap: 50px; /* Space between text and image */
+}
+
+/* Home text container */
+
+.home-text {
+    margin-top: 100px;
+    padding: 40px;
+
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.05);
+
+    border-radius: 20px;
+
+    width: 300px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    backdrop-filter: blur(10px);
+}
+
+/* Home image container */
+.home-image img {
+    width: 300px;
+    border-radius: 20px;
+}
+
+/* About section */
+
+.about {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content */
+    
+    order: 2; /* Ensure image is on the right */
+
+    gap: 50px; /* Space between text and image */
+}
+
+/* text container */
+
+.about-text {
+    order: 1; /* Ensure text is on the left */
+    max-width: 400px;
+}
+
+/* image container */
+
+.about-image img {
+    width: 250px;
+    border-radius: 20px;
+}
+
+/* --- General section styles--- */
+
+.section { 
     padding: 100px 20px;
     min-height: 100vh; /* Full screen height */
 }
@@ -294,4 +337,14 @@ button:hover {
     box-shadow: 
         0 0 10px rgba(173, 116, 195, 0.5),
         0 0 20px rgba(122, 58, 142, 0.5);
+}
+
+/* IMPORTANT */
+
+@media (max-width: 768px) {
+    .hero,
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
 }
