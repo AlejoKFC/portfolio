@@ -208,6 +208,7 @@ button:hover {
 /* About section */
 
 .about {
+    border: 2px solid red; /* Debugging border, remove later */
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content */
